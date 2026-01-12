@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "Zendesk Severity Highlighter",
+  "version": "1.0",
+  "description": "Highlights Zendesk tickets by severity level with color coding",
+  "permissions": [
+    "activeTab",
+    "*://*.zendesk.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.zendesk.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "48": "icon.png",
+    "96": "icon.png"
+  }
+}
